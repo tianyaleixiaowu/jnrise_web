@@ -91,7 +91,7 @@ $(function(){
 
         if(validate){
             //舜飞接口
-            _CWiQ.push(['_trackClick', 1]);
+            _CWiQ.push(['_trackReg', 1]);
 
             $.ajax({
                 type:'POST',
