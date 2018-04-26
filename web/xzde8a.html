@@ -8,7 +8,7 @@
     <script src="js/flexible.min.js"></script>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/pages/page-8.css">
-    <script type='text/javascript'>
+    <!--<script type='text/javascript'>
         window._CWiQ = window._CWiQ || [];
         window.BX_CLIENT_ID = 56868; // 帐号ID
         (function() {
@@ -20,7 +20,7 @@
             var h = document.getElementsByTagName('script')[0];
             h.parentNode.insertBefore(c, h);
         })();
-    </script>
+    </script>-->
 </head>
 <body>
     <div class="main">
@@ -32,6 +32,7 @@
                 <div class="form-radio-list">
                     <span class="form-radio-item"><input type="radio" name="age" value="3-5">3-5岁</span>
                     <span class="form-radio-item"><input type="radio" name="age" value="6-12">6-12岁</span>
+                    <span class="form-radio-item"><input type="radio" name="age" value="13-18">13-18岁</span>
                 </div>
             </div>
             <div class="form-item-radio">
@@ -61,7 +62,7 @@
                 <span class="message">请填写宝贝的名字(英文名、昵称均可)</span>
             </div>
             <button type="button" class="form-btn" id="submit">立即预约</button>
-            <h4>已有<span>3677</span>人预约</h4>
+            <h4>已有<span id="count">3677</span>人预约</h4>
         </div>
         <div class="main-image-bottom"></div>
         <div class="main-footer">
