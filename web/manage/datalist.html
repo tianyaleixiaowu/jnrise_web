@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数据检索</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/manage/main.css">
+</head>
+<body>
+    <div class="containers" id="data">
+        <div class="header">
+            <div class="logo">
+                <!--<img src="../../images/top-logo.png"/>-->
+                <div class="title">投放数据管理平台</div>
+            </div>
+            <div class="logout">
+                <a href="login.html" title="退出登录"></a>
+            </div>
+            <div class="setting">
+                <span class="icon-setting" title="修改密码"></span>
+            </div>
+            <div class="user">
+                <div class="inner">
+                    <span class="icon-user"></span>
+                    <span class="name">瑞思学科英语</span>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="main">
+                <div class="search">
+                    <div class="search-item-inline">
+                        <div class="search-item-title">查询时间段：</div>
+                        <div class="search-item-content">
+                            <input type="text" class="text-common" v-bind:value="search.begin" onclick="WdatePicker({dateFmt: 'yyyy-MM-dd HH:mm:ss',minDate:'%y-%M-#{%d-15} 00:00:00',maxDate:'#F{$dp.$D(\'end-date\')}'})" id="start-date">&nbsp;-&nbsp;
+                            <input type="text" class="text-common" v-bind:value="search.end" onclick="WdatePicker({dateFmt: 'yyyy-MM-dd HH:mm:ss',minDate:'#F{$dp.$D(\'start-date\')}',maxDate: '%y-%M-%d'})" id="end-date">
+                        </div>
+                    </div>
+                    <div class="search-item-inline">
+                        <div class="search-item-title">渠道来源：</div>
+                        <div class="search-item-content">
+                            <select class="text-common" id="channel-list">
+                                <option value="">全部</option>
+                                <option v-for="(value,key) in channel" v-bind:value="value.channel">{{value.name}}</option>
+                            </select>
+                            <!--<select class="text-common">
+                                <option value="0">腾讯视频</option>
+                                <option value="1">优酷视频</option>
+                            </select>-->
+                        </div>
+                    </div>
+                    <div class="search-item-inline">
+                        <button type="button" class="btn-common" v-on:click="searchList()">查询</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="data">
+                    <div class="data-msg">
+                        <div class="pull-left">符合查询条件的信息<span class="font-blue">{{data.totalCount}}</span>条</div>
+                        <div class="pull-right">
+                            <button type="button" class="btn-add" v-on:click="download()">下载</button>
+                        </div>
+                    </div>
+                    <div class="data-table">
+                        <!--列表无数据-->
+                        <p class="table-blank" v-if="data.totalCount<=0">对不起，没有找到符合查询条件的信息！</p>
+                        <!--列表有数据-->
+                        <table cellpadding="0" cellspacing="0" border="0" v-if="data.totalCount>0">
+                            <thead>
+                            <tr>
+                                <td style="width: 10%;">编号</td>
+                                <td style="width: 20%;">联系电话</td>
+                                <td style="width: 20%;">孩子姓名</td>
+                                <td style="width: 20%;">渠道</td>
+                                <td style="width: 30%;">注册时间</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr v-for="(value,key) in data.list">
+                                <td>{{key+1}}</td>
+                                <td>{{value.phone}}</td>
+                                <td>{{value.name}}</td>
+                                <td>{{value.channel}}</td>
+                                <td>{{value.createTime}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="data-pager" v-if="data.totalPage>1">
+                        <div class="pager-box">
+                            <ul>
+                                <li v-if="pagers.prev"><a href="javascript:void(0)" v-on:click="prev()">上一页</a></li>
+                                <li v-else-if="!pagers.prev"><a class="disabled">上一页</a></li>
+                                <li v-for="p in pagers.pagers">
+                                    <a v-if="p==pagers.index" class="current">{{p}}</a>
+                                    <a v-else-if="p!=pagers.index" href="javascript:void(0)" v-on:click="goto(p)">{{p}}</a>
+                                </li>
+                                <li v-if="pagers.next"><a href="javascript:void(0)" v-on:click="next()">下一页</a></li>
+                                <li v-else-if="!pagers.next"><a class="disabled">下一页</a></li>
+                            </ul>
+                            <span>共{{data.totalPage}}页，跳到第</span><input type="text" value="1" id="go-page"><span>页</span>
+                            <button type="button" class="btn-com1" v-on:click="goto()">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aside">
+                <ul>
+                    <li class="current"><a href="#"><span class="clue"></span><p>数据检索</p></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../js/datepicker/WdatePicker.js"></script>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/manage/common.js"></script>
+    <script src="../js/manage/datalist.js"></script>
+</body>
+</html>
