@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swipeslider.css">
-    <link rel="stylesheet" href="css/pages/page-21.css?v=001126b610">
+    <link rel="stylesheet" href="css/pages/page-21.css?v=8aafb01ad5">
     <!--<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>-->
     <!--<script type="text/javascript" src="js/pages/page-common.js?v=d78118cc5b"></script>-->
 </head>
@@ -32,11 +32,23 @@
         <!--第二屏-->
         <div class="main-bg main-bg-2">
             <h2><span class="line-left"></span>选择瑞思<span class="line-right"></span></h2>
-            <ul>
+            <!--<ul>
                 <li><h5>深耕学科英语<span>11年</span></h5><p>专业源于专注</p></li>
                 <li><h5>英文浸入式环境</h5><p>瑞思校区<span>=美国学校</span></p></li>
                 <li><h5>美国<span>HMHG原版</span>教材</h5><p>历时<span>7年2亿</span>打造</p></li>
-            </ul>
+            </ul>-->
+            <div class="main-images">
+                <div class="swipslider"  id="full_feature_1">
+                    <ul class="sw-slides">
+                        <li class="sw-slide">
+                            <img src="http://cdn.tianyalei.com/mm/rise/page-21/p21-02-02.jpg">
+                        </li>
+                        <li class="sw-slide">
+                            <img src="http://cdn.tianyalei.com/mm/rise/page-21/p21-02-01.jpg">
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <!--第三屏-->
         <div class="main-bg main-bg-3">
@@ -91,6 +103,10 @@
     <script type="text/javascript">
         $(window).load(function() {
             $('#full_feature').swipeslider({
+                prevNextButtons: false,
+                sliderHeight: '0'
+            });
+            $('#full_feature_1').swipeslider({
                 prevNextButtons: false,
                 sliderHeight: '0'
             });
