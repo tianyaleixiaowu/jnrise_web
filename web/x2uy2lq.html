@@ -7,32 +7,45 @@
     <script src="js/flexible-css.min.js"></script>
     <script src="js/flexible.min.js"></script>
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/pages/page-23.css?v=20f794c4c7">
+    <link rel="stylesheet" href="css/pages/page-25.css?v=6c55da6606">
 </head>
 <body>
     <div class="main">
         <div class="main-box">
+            <button type="button" class="main-box-btn" id="register"></button>
+        </div>
+        <!--注册信息-->
+        <div class="modal-form">
             <div class="main-form">
                 <div class="form-box">
                     <div class="form-item">
-                        <input type="number" value="" class="form-text" id="phone" placeholder="家长联系方式">
+                        <div class="form-text">
+                            <input type="number" value="" id="phone" placeholder="家长联系方式">
+                            <a href="javascript:void(0)" class="disabled" id="getcode">获取验证码</a>
+                        </div>
+                        <span class="message">请正确输入</span>
+                    </div>
+                    <div class="form-item" style="display: none;">
+                        <div class="form-text">
+                            <input type="number" value="" id="code" placeholder="请输入验证码">
+                            <a href="javascript:void(0)" class="disabled" id="getcode2">60S</a>
+                        </div>
                         <span class="message">请正确输入</span>
                     </div>
                     <button type="button" class="form-btn" id="submit"></button>
                 </div>
-                <div class="privacy-protection"><span></span>瑞思会保护您的隐私</div>
+                <p>仅用于课程预约</p>
             </div>
         </div>
         <!--提示信息-->
         <div class="modal">
             <div class="modal-message">
-                <h3>您的信息已提交</h3>
-                <h3>我们会尽快与您进一步沟通</h3>
-                <button type="button" class="modal-btn">知道了</button>
+                <h3>您的信息已成功提交</h3>
+                <h3>我们会立即为您安排</h3>
             </div>
         </div>
     </div>
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/pages/page-23.js?v=7df313d0fa"></script>
+    <script type="text/javascript" src="js/pages/page-25.js?v=9d6419086c"></script>
 </body>
 </html>
