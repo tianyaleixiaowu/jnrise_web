@@ -7,72 +7,81 @@
     <script src="js/flexible-css.min.js"></script>
     <script src="js/flexible.min.js"></script>
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/pages/page-28.css?v=05d4c45bf4">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swipeslider.css">
+    <link rel="stylesheet" href="css/pages/page-30.css?v=4c8dd239ce">
 </head>
 <body>
     <div class="main">
-        <div class="main-content">
-            <div class="main-form">
-                <div class="form-item">
-                    <input type="text" value="" class="form-text" id="phone-1" placeholder="家长联系方式">
-                    <span class="message">请正确输入</span>
-                </div>
-                <button type="button" class="form-btn" id="submit-1"></button>
-            </div>
+        <div class="main-content-1">
+            <button type="button" class="form-btn" id="main-btn"></button>
         </div>
+        <div class="main-content-2"></div>
+        <div class="main-content-3"></div>
         <div class="main-video">
             <span class="video-modal stop"></span>
             <span class="video-controls play"></span>
-            <video width="100%" height="100%" poster="http://cdn.tianyalei.com/mm/rise/page-28/page-28-10.jpg" id="video">
-                <source src="http://cdn.tianyalei.com/mm/rise/page-28/page-28.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+            <video width="100%" height="100%" poster="http://cdn.tianyalei.com/mm/rise/page-30/page-30-video.jpg" id="video">
+                <source src="http://cdn.tianyalei.com/mm/rise/page-30/page-30.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
             </video>
         </div>
-        <div class="main-content-2">
-            <div class="tab">
-                <div class="tab-title">
-                    <a href="javascript:void(0)"></a>
-                    <a href="javascript:void(0)"></a>
-                </div>
-                <ul class="tab-content">
-                    <li><img src="http://cdn.tianyalei.com/mm/rise/page-28/page-28-04.png"></li>
-                    <li><img src="http://cdn.tianyalei.com/mm/rise/page-28/page-28-05.png"></li>
-                </ul>
-            </div>
-        </div>
-        <div class="main-bottom">
-            <div class="bottom-form">
-                <div class="form-item">
-                    <input type="text" value="" class="form-text" placeholder="家长联系方式" id="phone-2">
-                    <span class="message">请正确输入</span>
-                </div>
-                <button type="button" class="form-btn" id="submit-2"></button>
-            </div>
-        </div>
-        <!--短信验证-->
-        <div class="main-code">
-            <div class="code-content">
-                <h3>验证手机</h3>
-                <span class="code-line"></span>
-                <p>验证码已发送到<span>13309090909</span>,10分钟内输入有效，请勿泄露</p>
-                <div class="code-form">
-                    <div class="form-item">
-                        <input type="text" id="code" placeholder="短信验证码">
-                        <span class="message">请正确输入</span>
-                        <a href="javascript:void(0)" id="getCode">60S</a>
-                    </div>
-                    <button type="button" class="form-btn" id="submit-3"></button>
+        <div class="main-content-4">
+            <div class="main-images">
+                <div class="swipslider"  id="about-school">
+                    <ul class="sw-slides">
+                        <li class="sw-slide">
+                            <img src="http://cdn.tianyalei.com/mm/rise/page-30/page-30-06.png">
+                        </li>
+                        <li class="sw-slide">
+                            <img src="http://cdn.tianyalei.com/mm/rise/page-30/page-30-07.png">
+                        </li>
+                        <li class="sw-slide">
+                            <img src="http://cdn.tianyalei.com/mm/rise/page-30/page-30-08.png">
+                        </li>
+                        <li class="sw-slide">
+                            <img src="http://cdn.tianyalei.com/mm/rise/page-30/page-30-09.png">
+                        </li>
+                        <li class="sw-slide">
+                            <img src="http://cdn.tianyalei.com/mm/rise/page-30/page-30-10.png">
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!--提示信息-->
+        <div class="main-float">
+            <div class="float-content">
+                <a href="javascript:void(0)"><span class="btn-edit" id="float-edit"></span></a>
+                <p></p>
+                <a href="javascript:void(0)"><span class="btn-top" id="float-top"></span></a>
+            </div>
+        </div>
         <div class="main-modal">
-            <div class="modal-message">
-                <h3>您的信息已成功提交</h3>
-                <h3>我们会立即为您安排</h3>
+            <div class="main-modal-content">
+                <div class="form-box">
+                    <div class="form-item">
+                        <div class="form-text">
+                            <input type="number" value="" id="phone" placeholder="联系方式">
+                            <a href="javascript:void(0)" id="getcode">获取验证码</a>
+                        </div>
+                        <span class="message">请正确输入</span>
+                    </div>
+                    <div class="form-font">另赠500元少儿英语课程</div>
+                    <div class="form-item item-code">
+                        <div class="form-text">
+                            <input type="number" value="" id="code" placeholder="短信验证码">
+                            <a href="javascript:void(0)" class="disabled" id="getcode2">60S</a>
+                        </div>
+                        <span class="message">请正确输入</span>
+                    </div>
+                    <p class="item-message">您的信息已成功提交</p>
+                </div>
+                <div class="main-modal-close"></div>
             </div>
+
         </div>
     </div>
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/pages/page-28.js?v=6a29cc1946"></script>
+    <script type="text/javascript" src="js/swipeslider.min.js"></script>
+    <script type="text/javascript" src="js/pages/page-30.js?v=025cd80ae0"></script>
 </body>
 </html>
