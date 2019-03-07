@@ -1,4 +1,4 @@
-﻿$(function() {
+$(function() {
     //初始化
     $("html,body").animate({"scrollTop": "0"},1);
 
@@ -57,7 +57,7 @@
                 }
             });
         }else{
-            console.log("stop");
+            //console.log("stop");
             window.clearInterval(timer);
         }
     },1000);
@@ -95,7 +95,7 @@
             }
         });
 
-        //window.location.href="https://m-eve.jd.com/tyk/activityInfo?activeId=111&provinceId=&channel=offline001";
+        window.location.href="https://m-eve.jd.com/tyk/activityInfo?activeId=111&provinceId=&channel=offline001";
     });
 
     //记录点击次数及点击坐标-540基准图
