@@ -1,0 +1,31 @@
+@charset "utf-8";
+body,html{width:100%;height:100%;margin:0;padding:0;border:none;background-color:#333;font-family:"微软雅黑","宋体"}
+.main{margin:0 auto;max-width:10rem;min-height:16rem;background-color:transparent}
+
+.main .main-content-image{padding-top: 0.4rem;padding-bottom: 0.4rem;background-color: #fff;text-align: center;}
+.main .main-content-image img{width: 100%;vertical-align: middle;border: none;margin: 0;padding: 0;}
+
+.main .main-content-1{padding-top: 0;}
+.main .main-content-6{background-color: #fffee2;}
+
+.main .main-content-form{width:10rem;height:6.23rem;padding-top: 0.4rem;padding-bottom: 0.4rem;background-color:#f2f2f2}
+.main .main-content-form h3{margin:0;padding:0;color:#784a26;font-size:.5rem;letter-spacing:.05rem;line-height:1rem;text-align:center;text-shadow:.2px .2px .2px #784a26}
+.main .main-content-form .form-box{width:7rem;margin:0 auto;padding-top:.3rem}
+.main .main-content-form .form-box .form-item{height:1.2rem}
+.main .main-content-form .form-box .form-item .form-text{display:block;width:6.68rem;height:.75rem;margin:0 auto;padding-left:.25rem;background-color:#fffdfe;border:.03rem solid #784a26;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;color:#000;font-size:.34rem;text-shadow:.2px .2px .2px #784a26}
+.main .main-content-form .form-box .form-btn{padding-top:.2rem}
+.main .main-content-form .form-box .form-btn button{display:block;width:6.93rem;height:1.03rem;background:url(http://cdn.tianyalei.com/mm/rise/page-rise-01/btn-01.jpg) top center no-repeat;-webkit-background-size:100% 100%;background-size:100% 100%;border:0;outline:0;margin:0 auto;cursor:pointer}
+.main .main-content-form .form-box .form-item .message{display:none;color:#f6444d;font-size:.28rem;text-shadow:.1px .1px .1px #f6444d;margin-left:.26rem}
+.main .main-content-form .form-box .form-item.error .message{display:block}
+
+.main .modal-message{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.5)}
+.main .modal-message .modal-message-content{width:7rem;height:4rem;background-color:rgba(255,255,255,1);-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;text-align:center;position:fixed;top:40%;left:50%;margin-left:-3.5rem}
+.main .modal-message .modal-message-content h3{font-size:.4rem;font-weight:400;text-align:center;margin-bottom:.3rem}
+.main .modal-message .modal-message-content h3:first-child{margin-top:1rem}
+.main .modal-message .modal-message-content .modal-btn{width:2rem;height:.6rem;margin-top:.3rem;background-color:#ffd33e;outline:0;border:0;-webkit-border-radius:.3rem;-moz-border-radius:.3rem;border-radius:.3rem;color:#fff;cursor:pointer}
+
+:-moz-placeholder{color:#784a26}
+::-moz-placeholder{color:#784a26}
+
+input:-ms-input-placeholder{color:#784a26}
+input::-webkit-input-placeholder{color:#784a26}
